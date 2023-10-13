@@ -26,7 +26,6 @@ var animations = [
 var current_animation = 0
 
 func _ready():
-	$AudioTema.play()
 	if Global.is_big:
 		$Animacao.position.y -= 8
 		current_animation_index = 1
@@ -52,10 +51,10 @@ func _physics_process(delta):
 	
 		if Input.is_action_just_pressed("ui_down"):
 			self.z_index = 0
-			set_physics_process(false)
-			$AnimationPlayer.play("GoingDownPipe")
-			$PowerDown.play()
-			emit_signal("entered_pipe")
+			#set_physics_process(false)
+			#$AnimationPlayer.play("GoingDownPipe")
+			#$PowerDown.play()
+			#emit_signal("entered_pipe")
 	
 		if not is_on_floor():
 			if motion.y < 0:
@@ -111,6 +110,15 @@ func pegar_moeda():
 	$PegarMoeda.play()
 
 
+func winner():
+	$AudioTema.stop()
+	$AudioVenceu.play()
+	if Global.is_big:
+		$AnimationPlayer.play("venceu_big")
+	else:
+		$AnimationPlayer.play("venceu")
+
+
 func volta():
 	position.x = 201
 	position.y = 346
@@ -121,12 +129,16 @@ func is_falling():
 	
 func die():
 	if not invencivel:
+		emit_signal("morreu")
 		$AnimationPlayer.play("morte")
 		$Timer.start()
 		$Animacao.position.y = 0
 		$Colisao.position.y = 190
 		$AudioTema.stop()
 		$morte.play()
+
+func morte():
+	$AnimationPlayer.play("morte")
 
 func _on_Timer_timeout():
 	Global.vidas -= 1

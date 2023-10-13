@@ -107,7 +107,6 @@ position = Vector2( 513, 327.5 )
 scale = Vector2( 3.98438, 2.89732 )
 frames = SubResource( 1 )
 animation = "menu"
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -117,6 +116,7 @@ stream = ExtResource( 4 )
 volume_db = -17.307
 
 [node name="MenuPlayer" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 111, 466 )
 scale = Vector2( 2.5, 2.5 )
 
@@ -125,6 +125,6 @@ tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 32, 0, 0, 64, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 393228, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0 )
+tile_data = PoolIntArray( 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

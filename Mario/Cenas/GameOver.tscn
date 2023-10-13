@@ -71,14 +71,15 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="gameover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -1.431
 
 [node name="game" type="Sprite" parent="."]
-position = Vector2( 430, 330 )
+position = Vector2( 157.13, 330 )
 scale = Vector2( 2.02273, 1.43173 )
 texture = ExtResource( 2 )
 
 [node name="over" type="Sprite" parent="."]
-position = Vector2( 640, 330 )
+position = Vector2( 884.174, 330 )
 scale = Vector2( 2.023, 1.432 )
 texture = ExtResource( 3 )
 

@@ -2,4 +2,13 @@ extends Node2D
 
 
 func _ready():
-	$AudioTema.play()
+	$AudioFundo.play()
+	$Portal.SubirDescer()
+
+
+
+
+func _on_Player_morreu():
+	$Player.morte()
+	$AudioFundo.stop()
+	$morte.play()
