@@ -14,3 +14,7 @@ func _on_AreaImpacto_body_entered(body):
 			$AreaImpacto/CollisionShape2D.disabled = true
 			$cogumelo.hited()
 			$PowerUpAparece.play()
+
+func cogu_menu():
+	$AnimationPlayer.play("bater")
+

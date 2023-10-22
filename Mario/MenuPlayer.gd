@@ -69,6 +69,12 @@ func _physics_process(delta):
 		motion = move_and_slide(motion, UP)
 	
 
-
 func menu():
+	$AnimationPlayer.play("menu")
+
+func menu2():
 	$AnimationPlayer.play("sozinho")
+
+func menu3():
+	$AnimationPlayer.play("menu2")
+

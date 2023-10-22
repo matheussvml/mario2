@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready():
-	$MenuPlayer.menu()
+	$MenuPlayer.menu2()
 	Hud.visible = false
 	$AnimationPlayer.play("dialogo")
 	$MusicaFundo.play()
