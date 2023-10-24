@@ -15,8 +15,12 @@ func SubirDescer():
 
 func _on_Portal_body_entered(body):
 	if body is Player:
-		$Timer.start()
-		body.winner()
+		if Global.level > 1:
+			Hud.visible = false
+			get_tree().change_scene("res://cenas/final.tscn")
+		else :
+			$Timer.start()
+			body.winner()
 #		Global.level += 1
 #		get_tree().change_scene("res://cenas/Level" + str(Global.level) + ".tscn")
 
